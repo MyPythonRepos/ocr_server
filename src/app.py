@@ -10,7 +10,10 @@ UPLOAD_FOLDER = '/static/uploads/'
 # allow files of a specific type
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
-app = Flask(__name__, template_folder = '../templates')
+TEMPLATE_DIR = '../templates'
+STATIC_DIR = '../static'
+
+app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
 app.debug = True
 
 # function to check the file extension

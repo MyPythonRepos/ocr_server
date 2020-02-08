@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF8"/>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/myStile.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/MyStyle.css') }}"/>
     <script>
         function alerta() {
             alert("hola, mundo");
@@ -10,9 +10,19 @@
     </script>
 </head>
 <body>
-    <label>Escoge una foto:</label>
-    <input type="file">
-    <input type="submit" value="ProcesaR" onclick="alerta()">
+    <header>
+        <p>Página de pruebas</p>
+    </header>
+    <section>
+        <label>Escoge una foto:</label>
+        <input type="file" class="button"><br/>
+        <input type="button" class="button" value="Procesar" onclick="alerta()">
+    </section>
+    <section>
+        <figure>
+            <img src="{{ url_for('static', filename='upload/peru.jpg') }}"/>
+        </figure>
+    </section>
 </body>
 
 </html>
