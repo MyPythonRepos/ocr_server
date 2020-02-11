@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <script>
+        function alerta() {
+            alert("hola, mundo");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <p>Página de pruebas</p>
+    </header>
+    <section>
+        <label>Escoge una foto:</label><br/>
+        <input type="file">
+        <a href="{{ url_for('upload_page')}}"><input type="button" class="button" value="Procesar" ></a>
+    </section>
+    <section>
+        <div class="two_column">
+            <figure>
+                <img src="{{ url_for('static', filename='upload/peru.JPG') }}"/>
+            </figure>
+        </div>
+        <div class="two_column_last">
+            <input type="textarea">
+        </div>
+    </section>
+</body>
+
+</html>

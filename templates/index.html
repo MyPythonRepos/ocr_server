@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF8"/>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/MyStyle.css') }}"/>
-    <script>
-        function alerta() {
-            alert("hola, mundo");
-        }
-    </script>
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <title>OCR & Python</title>
+  </head>
+  <body>
     <header>
-        <p>Página de pruebas</p>
+        <h1>Optical Character Regnition with Python</h1>
+        <h2>An academic aproximation</h2>
     </header>
     <section>
-        <label>Escoge una foto:</label>
-        <input type="file" class="button"><br/>
-        <input type="button" class="button" value="Procesar" onclick="alerta()">
+        <p>This is an academic aproximation to the Optical Character Recognition (OCR) using <a href="https://www.python.org/">Python</a>.</p>
+        <p>Using the Open Source OCR engine <a href="https://github.com/tesseract-ocr/tesseract">Tesseract</a> and the python library 
+            <a href="https://pypi.org/project/pytesseract/">Python-tesseract</a> o PyTesseract that will allow us to recognize and “read”
+            the text embedded in images.</p>
+        <a href="{{ url_for('upload_page') }}"><input type="button" value="START"> </a>
     </section>
-    <section>
-        <figure>
-            <img src="{{ url_for('static', filename='upload/peru.jpg') }}"/>
-        </figure>
-    </section>
-</body>
-
+  </body>
 </html>

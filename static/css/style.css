@@ -1,0 +1,33 @@
+header {
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}
+
+section {
+  margin: 1%;
+  padding: 1%;
+  background-color: rgb(138, 136, 136); 
+  overflow: auto;
+  text-align: center;
+}
+
+.button {
+  background-color: rgb(13, 113, 228);
+  color: #ffffff;
+}
+
+.two_column {
+  width: 48%;
+  float: left;
+  border: red solid 1px;
+  text-align: center;
+}
+
+.two_column_last{
+  width: 48%;
+  float: right;
+  border: red solid 1px;
+  text-align: center;
+}
