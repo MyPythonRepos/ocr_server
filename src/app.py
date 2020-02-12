@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 from ocr_server import ocr_core
 
 # define a folder to store and later serve the images
-UPLOAD_FOLDER = '/static/uploads/'
+UPLOAD_FOLDER = '/static/upload/'
 
 # allow files of a specific type
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
@@ -29,11 +29,14 @@ def home_page():
 # route and function to handle the upload page
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_page():  
+
     if request.method == 'POST':
+        
         # check if there is a file in the request
         if 'file' not in request.files:
             return render_template('upload.html', msg='No file selected')
         file = request.files['file']
+        
         # if no file is selected
         if file.filename == '':
             return render_template('upload.html', msg='No file selected')

@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF8"/>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
-    <script>
+    <script type="text/javascript">
         function alerta() {
             alert("hola, mundo");
+        }
+        function setImage() {
+          if (document.getElementById("file_button").value != null){
+              alert(document.getElementById("file_button").value);
+          }
         }
     </script>
 </head>
 <body>
     <header>
-        <p>Página de pruebas</p>
+        <h1>Upload page...</h1>
     </header>
     <section>
-        <label>Escoge una foto:</label><br/>
-        <input type="file">
-        <a href="{{ url_for('upload_page')}}"><input type="button" class="button" value="Procesar" ></a>
+        <label>Select a picture:</label><br/>
+        <form method="POST" enctype=multipart/form-data>
+            <input id="file_button" type="file" name="file">
+            <input type="submit" value="Upload">
+        </form>
     </section>
     <section>
         <div class="two_column">
-            <figure>
-                <img src="{{ url_for('static', filename='upload/peru.JPG') }}"/>
-            </figure>
+            {% if img_src %}
+                <img src="{{ img_src }}">
+                <!-- <figure>
+                    
+                    <img src="{{ img_src }}"/>
+                </figure> -->
+            {% endif %}
+            <!-- <img src="{{ url_for('static', filename='upload/peru.JPG') }}"/> -->
         </div>
         <div class="two_column_last">
-            <input type="textarea">
+            {% if msg != null }
+                <h1> {{ msg }}</h1>
+                <textarea id="result" rows="4" cols="50">{{ extracted_text }}</textarea>
+            {% endif %}
         </div>
     </section>
 </body>
