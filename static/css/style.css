@@ -21,13 +21,14 @@ section {
 .two_column {
   width: 48%;
   float: left;
-  border: red solid 1px;
+  border: #000000 solid 1px;
   text-align: center;
 }
 
 .two_column_last{
   width: 48%;
   float: right;
-  border: red solid 1px;
+  border: #000000 solid 1px;
   text-align: center;
+  height: auto;
 }
