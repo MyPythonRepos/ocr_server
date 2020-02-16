@@ -1,8 +1,6 @@
 argh==0.26.2
 asn1crypto==0.24.0
 autopep8==1.4.4
-backports.functools-lru-cache==1.6.1
-beautifulsoup4==4.8.1
 certifi==2019.6.16
 chardet==3.0.4
 configparser==3.7.4
@@ -10,7 +8,6 @@ cryptography==2.1.4
 entrypoints==0.3
 enum34==1.1.6
 flake8==3.7.8
-functools32==3.2.3.post2
 gunicorn==19.10.0
 idna==2.6
 ipaddress==1.0.17
@@ -30,9 +27,6 @@ requests==2.22.0
 requests-oauthlib==1.2.0
 SecretStorage==2.3.1
 six==1.11.0
-soupsieve==1.9.5
-tweepy==3.8.0
 typing==3.7.4
 urllib3==1.25.3
 virtualenv==15.1.0
-watchdog==0.9.0
