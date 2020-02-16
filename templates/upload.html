@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF8"/>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
@@ -19,7 +19,7 @@
         <h1>Upload page...</h1>
     </header>
     <section>
-        <label>Select a picture:</label><br/>
+        <h2>Select a picture:</h2><br/>
         <form method="POST" enctype=multipart/form-data>
             <input id="file_button" type="file" name="file">
             <input type="submit" value="Upload">
@@ -28,18 +28,21 @@
     <section>
         <div class="two_column">
             {% if img_src %}
-                <img src="{{ img_src }}">
-                <!-- <figure>
-                    
-                    <img src="{{ img_src }}"/>
-                </figure> -->
+                
+                <figure>
+                    <img src="{{ img_src }}">    
+                </figure>
+            {% else %}
+                <h2> There isn't any file upload yet.</h2>
             {% endif %}
-            <!-- <img src="{{ url_for('static', filename='upload/peru.JPG') }}"/> -->
+            
         </div>
         <div class="two_column_last">
             {% if msg != null %}
                 <h1> {{ msg }}</h1>
                 <textarea id="result" rows="4" cols="50">{{ extracted_text }}</textarea>
+            {% else %}
+                <br/>
             {% endif %}
         </div>
     </section>
