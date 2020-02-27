@@ -3,16 +3,6 @@
 <head>
     <meta charset="UTF8"/>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
-    <script type="text/javascript">
-        function alerta() {
-            alert("hola, mundo");
-        }
-        function setImage() {
-          if (document.getElementById("file_button").value != null){
-              alert(document.getElementById("file_button").value);
-          }
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -26,25 +16,20 @@
         </form>
     </section>
     <section>
+      {% if not img_src %}
+        <h2> There isn't any file upload yet.</h2>
+      {% else %}
         <div class="two_column">
-            {% if img_src %}
-                
-                <figure>
-                    <img src="{{ img_src }}">    
-                </figure>
-            {% else %}
-                <h2> There isn't any file upload yet.</h2>
-            {% endif %}
-            
+          <figure>
+            <img id="image_uploaded" src="{{ img_src }}" width="50%">
+            <figcaption id='img_footer'>{{ img_title }}</figcaption>    
+          </figure>
         </div>
         <div class="two_column_last">
-            {% if msg != null %}
-                <h1> {{ msg }}</h1>
-                <textarea id="result" rows="4" cols="50">{{ extracted_text }}</textarea>
-            {% else %}
-                <br/>
-            {% endif %}
+          <h1> {{ msg }}</h1>
+          <textarea id="result" rows="4" cols="50">{{ extracted_text }}</textarea>
         </div>
+      {% endif %}
     </section>
 </body>
 

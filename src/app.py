@@ -54,7 +54,8 @@ def upload_page():
             return render_template('upload.html',
                                    msg='Successfully processed',
                                    extracted_text=extracted_text,
-                                   img_src=UPLOAD_FOLDER + file.filename)
+                                   img_src=UPLOAD_FOLDER + file.filename,
+                                   img_title = file.filename)
     elif request.method == 'GET':
         return render_template('upload.html')
 
