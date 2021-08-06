@@ -21,3 +21,6 @@ A continuación, instalamos la librería para Python pytesseract:
 Necesitaremos instalar Flask para crear una interfaz web:
 
 + sudo pip3 install flask
+
+
+
