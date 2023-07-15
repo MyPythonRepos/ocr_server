@@ -4,7 +4,7 @@ autopep8==1.4.4
 certifi==2022.12.7
 chardet==3.0.4
 configparser==3.7.4
-cryptography==39.0.1
+cryptography==41.0.2
 entrypoints==0.3
 enum34==1.1.6
 flake8==3.7.8
